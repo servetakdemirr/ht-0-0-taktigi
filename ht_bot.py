@@ -11,8 +11,15 @@ import json
 import csv
 import time
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from collections import defaultdict
+
+# Istanbul timezone (UTC+3)
+TZ_OFFSET = timezone(timedelta(hours=3))
+
+def now_istanbul():
+    """Istanbul saatini döndür"""
+    return datetime.now(TZ_OFFSET)
 
 # ==================== AYARLAR ====================
 API_KEY = os.environ.get("API_FOOTBALL_KEY", "")
@@ -242,7 +249,7 @@ def check_live_matches():
     """Canlı maçları kontrol et"""
     global notified_fixtures
     
-    print(f"\n[{datetime.now().strftime('%H:%M:%S')}] Canlı maçlar kontrol ediliyor...")
+    print(f"\n[{now_istanbul().strftime('%H:%M:%S')}] Canlı maçlar kontrol ediliyor...")
     
     # Geçmiş verileri yükle
     team_goals, team_goals_home, team_goals_away, existing_fixture_ids = load_historical_data()
@@ -361,7 +368,7 @@ def check_live_matches():
 
 def get_todays_fixtures():
     """Bugünkü maçları çek ve çalışma saatlerini belirle"""
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = now_istanbul().strftime("%Y-%m-%d")
     
     all_fixtures = []
     
@@ -393,12 +400,12 @@ def get_todays_fixtures():
     
     # İlk maçtan 45 dk önce başla
     first_hour, first_min = map(int, first_match.split(':'))
-    start_time = datetime.now().replace(hour=first_hour, minute=first_min, second=0)
+    start_time = now_istanbul().replace(hour=first_hour, minute=first_min, second=0, microsecond=0)
     start_time = start_time - timedelta(minutes=45)
     
     # Son maçtan 2 saat sonra bitir
     last_hour, last_min = map(int, last_match.split(':'))
-    end_time = datetime.now().replace(hour=last_hour, minute=last_min, second=0)
+    end_time = now_istanbul().replace(hour=last_hour, minute=last_min, second=0, microsecond=0)
     end_time = end_time + timedelta(hours=2)
     
     return start_time, end_time, all_fixtures
@@ -407,7 +414,7 @@ def is_within_schedule(start_time, end_time):
     """Şu an çalışma saatleri içinde mi?"""
     if start_time is None or end_time is None:
         return False
-    now = datetime.now()
+    now = now_istanbul()
     return start_time <= now <= end_time
 
 def main():
@@ -425,7 +432,7 @@ def main():
     fixtures = []
     
     while True:
-        now = datetime.now()
+        now = now_istanbul()
         today = now.strftime("%Y-%m-%d")
         
         # Günde 1 kez fikstür çek
