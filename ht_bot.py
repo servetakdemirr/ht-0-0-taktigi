@@ -78,23 +78,28 @@ def api_request(endpoint):
     conn.close()
     return data
 
-def send_telegram(message):
-    """Telegram bildirimi gönder"""
-    try:
-        conn = http.client.HTTPSConnection("api.telegram.org")
-        params = json.dumps({
-            "chat_id": TELEGRAM_CHAT_ID,
-            "text": message,
-            "parse_mode": "HTML"
-        })
-        headers = {'Content-Type': 'application/json'}
-        conn.request("POST", f"/bot{TELEGRAM_TOKEN}/sendMessage", params, headers)
-        res = conn.getresponse()
-        conn.close()
-        return res.status == 200
-    except Exception as e:
-        print(f"Telegram hatası: {e}")
-        return False
+def send_telegram(message, max_retries=3):
+    """Telegram bildirimi gönder (retry mekanizmalı)"""
+    for attempt in range(max_retries):
+        try:
+            conn = http.client.HTTPSConnection("api.telegram.org", timeout=30)
+            params = json.dumps({
+                "chat_id": TELEGRAM_CHAT_ID,
+                "text": message,
+                "parse_mode": "HTML"
+            })
+            headers = {'Content-Type': 'application/json'}
+            conn.request("POST", f"/bot{TELEGRAM_TOKEN}/sendMessage", params, headers)
+            res = conn.getresponse()
+            conn.close()
+            if res.status == 200:
+                return True
+            print(f"Telegram HTTP hatası: {res.status} (deneme {attempt + 1}/{max_retries})")
+        except Exception as e:
+            print(f"Telegram hatası: {e} (deneme {attempt + 1}/{max_retries})")
+        if attempt < max_retries - 1:
+            time.sleep(5)  # 5 saniye bekle ve tekrar dene
+    return False
 
 # ==================== VERİ FONKSİYONLARI ====================
 
@@ -317,9 +322,12 @@ def check_live_matches():
 ⏱️ Dakika: {elapsed}'
 
 ⚠️ Yeterli geçmiş veri yok!"""
-            if send_telegram(message):
+            sent = send_telegram(message)
+            if sent:
                 print(f"  ⚠ BİLDİRİM (veri yok): {home_team} vs {away_team}")
                 notified_fixtures.add(fixture_id)
+            else:
+                print(f"  ✗ Bildirim GÖNDERİLEMEDİ (sonra tekrar denenecek): {home_team} vs {away_team}")
             continue
         
         if avg_combined <= 2.5:
@@ -342,9 +350,12 @@ def check_live_matches():
 📈 <b>İstatistikler:</b>
 • Avg Goal Combined: <b>{avg_combined:.2f}</b>
 ⚠️ Son 5 maç verisi eksik!"""
-            if send_telegram(message):
+            sent = send_telegram(message)
+            if sent:
                 print(f"  ⚠ BİLDİRİM (kısmi veri): {home_team} vs {away_team}")
                 notified_fixtures.add(fixture_id)
+            else:
+                print(f"  ✗ Bildirim GÖNDERİLEMEDİ (sonra tekrar denenecek): {home_team} vs {away_team}")
             continue
         
         # TÜM KRİTERLER SAĞLANDI - Bildirim gönder!
@@ -360,11 +371,12 @@ def check_live_matches():
 • Home Avg (Home): {features['avg_goal_home_team_home']:.2f}
 • Away Avg (Away): {features['avg_goal_away_team_away']:.2f}"""
         
-        if send_telegram(message):
+        sent = send_telegram(message)
+        if sent:
             print(f"  ✓ BİLDİRİM: {home_team} vs {away_team}")
             notified_fixtures.add(fixture_id)
         else:
-            print(f"  ✗ Bildirim gönderilemedi: {home_team} vs {away_team}")
+            print(f"  ✗ Bildirim GÖNDERİLEMEDİ (sonra tekrar denenecek): {home_team} vs {away_team}")
 
 def get_todays_fixtures():
     """Bugünkü maçları çek ve çalışma saatlerini belirle"""
