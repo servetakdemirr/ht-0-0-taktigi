@@ -2842,3 +2842,45 @@ fixture_id,date,time,league_id,league_name,country,round,home_team_id,home_team,
 1379158,2025-12-30,22:30,39,Premier League,England,Regular Season - 19,48,West Ham,51,Brighton,2,2,2,1,2,2,,,,1.11,1.83,2.94,0,0
 1379149,2025-12-30,23:15,39,Premier League,England,Regular Season - 19,42,Arsenal,66,Aston Villa,4,1,0,0,4,1,,,,2.54,1.58,4.12,0,0
 1379155,2025-12-30,23:15,39,Premier League,England,Regular Season - 19,33,Manchester United,39,Wolves,1,1,1,1,1,1,,,,1.89,0.33,2.22,0,0
+1379154,2026-01-01,20:30,39,Premier League,England,Regular Season - 19,40,Liverpool,63,Leeds,0,0,0,0,0,0,,,,1.57,0.89,2.46,0,0
+1379153,2026-01-01,20:30,39,Premier League,England,Regular Season - 19,52,Crystal Palace,36,Fulham,1,1,1,0,1,1,,,,1.08,1.1,2.18,0,0
+1379150,2026-01-01,23:00,39,Premier League,England,Regular Season - 19,55,Brentford,47,Tottenham,0,0,0,0,0,0,,,,2.22,1.62,3.84,0,0
+1379157,2026-01-01,23:00,39,Premier League,England,Regular Season - 19,746,Sunderland,50,Manchester City,0,0,0,0,0,0,,,,1.78,2.07,3.85,0,0
+1396385,2026-01-02,21:45,94,Primeira Liga,Portugal,Regular Season - 17,762,GIL Vicente,228,Sporting CP,1,1,0,1,1,1,,,,1.29,2.0,3.29,0,0
+1387850,2026-01-02,22:45,61,Ligue 1,France,Regular Season - 17,96,Toulouse,116,Lens,0,3,0,0,0,3,,,,1.75,1.5,3.25,0,0
+1390995,2026-01-02,23:00,140,La Liga,Spain,Regular Season - 18,728,Rayo Vallecano,546,Getafe,1,1,1,0,1,1,,,,1.3,1.64,2.94,0,0
+1396389,2026-01-02,23:45,94,Primeira Liga,Portugal,Regular Season - 17,224,Guimaraes,225,Nacional,2,1,0,0,2,1,,,,1.78,1.3,3.08,0,0
+1379159,2026-01-03,15:30,39,Premier League,England,Regular Season - 20,66,Aston Villa,65,Nottingham Forest,3,1,1,0,3,1,,,,1.67,0.92,2.59,0,0
+1390990,2026-01-03,16:00,140,La Liga,Spain,Regular Season - 18,538,Celta Vigo,532,Valencia,4,1,1,0,4,1,,,,1.25,1.2,2.45,0,0
+1379168,2026-01-03,18:00,39,Premier League,England,Regular Season - 20,39,Wolves,48,West Ham,3,0,3,0,3,0,,,,1.25,1.1,2.35,0,0
+1379161,2026-01-03,18:00,39,Premier League,England,Regular Season - 20,51,Brighton,44,Burnley,2,0,1,0,2,0,,,,1.78,1.33,3.11,0,0
+1390994,2026-01-03,18:15,140,La Liga,Spain,Regular Season - 18,727,Osasuna,531,Athletic Club,1,1,1,0,1,1,,,,1.75,0.64,2.39,0,0
+1396388,2026-01-03,18:30,94,Primeira Liga,Portugal,Regular Season - 17,218,Tondela,240,Arouca,3,1,2,1,3,1,,,,0.43,1.11,1.54,0,0
+1387847,2026-01-03,19:00,61,Ligue 1,France,Regular Season - 17,91,Monaco,80,Lyon,1,3,1,1,1,3,,,,1.73,1.36,3.09,0,0
+1390991,2026-01-03,20:30,140,La Liga,Spain,Regular Season - 18,797,Elche,533,Villarreal,1,3,1,2,1,3,,,,1.78,1.5,3.28,0,0
+1379160,2026-01-03,20:30,39,Premier League,England,Regular Season - 20,35,Bournemouth,42,Arsenal,2,3,1,1,2,3,,,,1.1,1.62,2.72,0,0
+1396383,2026-01-03,21:00,94,Primeira Liga,Portugal,Regular Season - 17,211,Benfica,230,Estoril,3,1,2,1,3,1,,,,1.86,1.5,3.36,0,0
+1396384,2026-01-03,21:00,94,Primeira Liga,Portugal,Regular Season - 17,15130,Estrela,217,SC Braga,3,3,1,1,3,3,,,,1.25,1.75,3.0,0,0
+1387848,2026-01-03,21:00,61,Ligue 1,France,Regular Season - 17,84,Nice,95,Strasbourg,1,1,0,1,1,1,,,,1.08,1.58,2.67,0,0
+1390992,2026-01-03,23:00,140,La Liga,Spain,Regular Season - 18,540,Espanyol,529,Barcelona,0,2,0,0,0,2,,,,1.44,2.31,3.75,0,0
+1387844,2026-01-03,23:05,61,Ligue 1,France,Regular Season - 17,79,Lille,94,Rennes,0,2,0,0,0,2,,,,2.27,1.12,3.4,0,0
+1396381,2026-01-03,23:30,94,Primeira Liga,Portugal,Regular Season - 17,21595,AVS,215,Moreirense,0,2,0,1,0,2,,,,0.88,1.0,1.88,0,0
+1379164,2026-01-04,15:30,39,Premier League,England,Regular Season - 20,63,Leeds,33,Manchester United,1,1,0,0,1,1,,,,1.89,1.67,3.56,0,0
+1390998,2026-01-04,16:00,140,La Liga,Spain,Regular Season - 18,536,Sevilla,539,Levante,0,3,0,1,0,3,,,,1.75,1.25,3.0,0,0
+1387846,2026-01-04,17:00,61,Ligue 1,France,Regular Season - 17,81,Marseille,83,Nantes,0,2,0,1,0,2,,,,2.73,0.75,3.48,0,0
+1379166,2026-01-04,18:00,39,Premier League,England,Regular Season - 20,34,Newcastle,52,Crystal Palace,2,0,0,0,2,0,,,,2.0,1.5,3.5,0,0
+1379162,2026-01-04,18:00,39,Premier League,England,Regular Season - 20,45,Everton,55,Brentford,2,4,0,1,2,4,,,,1.3,1.25,2.55,0,0
+1379167,2026-01-04,18:00,39,Premier League,England,Regular Season - 20,47,Tottenham,746,Sunderland,1,1,1,0,1,1,,,,1.69,0.44,2.14,0,0
+1390996,2026-01-04,18:15,140,La Liga,Spain,Regular Season - 18,541,Real Madrid,543,Real Betis,5,1,1,0,5,1,,,,1.82,2.07,3.89,0,0
+1379163,2026-01-04,18:15,39,Premier League,England,Regular Season - 20,36,Fulham,40,Liverpool,2,2,1,0,2,2,,,,1.64,1.75,3.39,0,0
+1396386,2026-01-04,18:30,94,Primeira Liga,Portugal,Regular Season - 17,226,Rio Ave,4716,Casa Pia,3,1,0,0,3,1,,,,1.0,1.5,2.5,0,0
+1387845,2026-01-04,19:15,61,Ligue 1,France,Regular Season - 17,97,Lorient,112,Metz,1,1,0,1,1,1,,,,2.12,1.25,3.38,0,0
+1387842,2026-01-04,19:15,61,Ligue 1,France,Regular Season - 17,106,Stade Brestois 29,108,Auxerre,2,0,1,0,2,0,,,,1.5,0.57,2.07,0,0
+1387843,2026-01-04,19:15,61,Ligue 1,France,Regular Season - 17,111,Le Havre,77,Angers,2,1,1,0,2,1,,,,1.12,0.62,1.75,0,0
+1390989,2026-01-04,20:30,140,La Liga,Spain,Regular Season - 18,542,Alaves,718,Oviedo,1,1,0,0,1,1,,,,1.2,0.62,1.82,0,1
+1390993,2026-01-04,20:30,140,La Liga,Spain,Regular Season - 18,798,Mallorca,547,Girona,1,2,0,1,1,2,,,,1.25,0.89,2.14,0,0
+1379165,2026-01-04,20:30,39,Premier League,England,Regular Season - 20,50,Manchester City,49,Chelsea,1,1,1,0,1,1,,,,2.54,2.0,4.54,0,0
+1396387,2026-01-04,21:00,94,Primeira Liga,Portugal,Regular Season - 17,227,Santa Clara,212,FC Porto,0,1,0,0,0,1,,,,1.08,2.08,3.17,0,0
+1387849,2026-01-04,22:45,61,Ligue 1,France,Regular Season - 17,85,Paris Saint Germain,114,Paris FC,2,1,1,0,2,1,,,,2.7,1.12,3.83,0,0
+1390997,2026-01-04,23:00,140,La Liga,Spain,Regular Season - 18,548,Real Sociedad,530,Atletico Madrid,1,1,0,0,1,1,,,,1.5,1.46,2.96,0,0
+1396382,2026-01-04,23:30,94,Primeira Liga,Portugal,Regular Season - 17,4724,Alverca,242,Famalicao,1,0,0,0,1,0,,,,0.75,1.33,2.08,0,0
