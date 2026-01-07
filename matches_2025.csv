@@ -2884,3 +2884,8 @@ fixture_id,date,time,league_id,league_name,country,round,home_team_id,home_team,
 1387849,2026-01-04,22:45,61,Ligue 1,France,Regular Season - 17,85,Paris Saint Germain,114,Paris FC,2,1,1,0,2,1,,,,2.7,1.12,3.83,0,0
 1390997,2026-01-04,23:00,140,La Liga,Spain,Regular Season - 18,548,Real Sociedad,530,Atletico Madrid,1,1,0,0,1,1,,,,1.5,1.46,2.96,0,0
 1396382,2026-01-04,23:30,94,Primeira Liga,Portugal,Regular Season - 17,4724,Alverca,242,Famalicao,1,0,0,0,1,0,,,,0.75,1.33,2.08,0,0
+1502168,2026-01-05,20:30,551,Super Cup,Turkey,Semi-finals,645,Galatasaray,998,Trabzonspor,4,1,2,0,4,1,,,,2.17,2.0,4.17,0,0
+1502169,2026-01-06,20:30,551,Super Cup,Turkey,Semi-finals,611,Fenerbahçe,3603,Samsunspor,2,0,1,0,2,0,,,,2.07,1.55,3.62,0,0
+1490980,2026-01-06,21:00,143,Copa del Rey,Spain,Round of 32,715,Granada CF,728,Rayo Vallecano,1,3,1,0,1,3,,,,,1.4,,,0
+1489237,2026-01-06,23:00,97,Taça da Liga,Portugal,Semi-finals,228,Sporting CP,224,Guimaraes,1,2,1,0,1,2,,,,3.14,0.8,3.94,0,0
+1379178,2026-01-06,23:00,39,Premier League,England,Regular Season - 21,48,West Ham,65,Nottingham Forest,1,2,1,0,1,2,,,,1.2,0.93,2.13,0,0
